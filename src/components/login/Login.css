@@ -1,0 +1,17 @@
+.Login {
+  align-items: center;
+  justify-content: center;
+}
+.form {
+  align-items: center;
+  justify-content: center;
+  margin: 5%;
+}
+.btn {
+  background-color: aquamarine;
+}
+.btn-align {
+  align-items: center;
+  justify-content: center;
+  margin: 5%;
+}
