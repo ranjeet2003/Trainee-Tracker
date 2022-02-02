@@ -14,7 +14,7 @@ import {
   Tooltip,
   MenuItem,
 } from "@material-ui/core";
-import Logo from "../../Assets/images/Logo.png";
+import Logo from "../../Assets/images/headerLogo.png";
 
 const pages = ["Status", "Upcoming Sessions", "Assignments"];
 const settings = ["DashBoard", "Profile", "Account", "Logout"];
@@ -50,7 +50,7 @@ const ResponsiveAppBar = () => {
               sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
             >
               <Link to="/">
-                <img src={Logo} alt="Logo" width="3%" height="3%" />
+                <img src={Logo} alt="Logo" width="22%" height="22%" />
               </Link>
             </Typography>{" "}
             <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
