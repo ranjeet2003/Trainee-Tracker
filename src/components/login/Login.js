@@ -1,39 +1,51 @@
 import * as React from "react";
-import "./Login.css";
-import { Box, Card, Button, Grid, TextField } from "@material-ui/core";
-import AccountCircle from "@mui/icons-material/AccountCircle";
-// import { LocalPhoneIcon, VpnKeyIcon } from "@mui/icons-material";
-import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
-import VpnKeyIcon from "@mui/icons-material/VpnKey";
+import {
+  Card,
+  CardActions,
+  CardContent,
+  Button,
+  TextField,
+} from "@mui/material";
 
-const form = (
-  <div className="form">
-    <Box sx={{ "& > :not(style)": { m: 1 } }}>
-      <Box sx={{ display: "flex", alignItems: "center", margin: "2%" }}>
-        <LocalPhoneIcon sx={{ color: "action.active", mr: 1, my: 0.5 }} />
-        <TextField id="input-with-sx" label="Mobile No." variant="standard" />
-      </Box>
-      <Box sx={{ display: "flex", alignItems: "center", margin: "2%" }}>
-        <VpnKeyIcon sx={{ color: "action.active", mr: 1, my: 0.5 }} />
-        <TextField id="input-with-sx" label="Password" variant="standard" />
-      </Box>
-      <div className="btn-align">
-        <Button variant="contained">Login</Button>
-      </div>
-    </Box>
-  </div>
-);
+const form = () => {
+  <div>
+    <TextField id="standard-basic" label="Mobile No." variant="standard" />
+    <TextField id="standard-basic" label="Password" variant="standard" />
+  </div>;
+};
 
-export default function Login() {
+export default function MediaCard(props) {
   return (
-    <>
-      <Grid className="Login" container spacing={2}>
-        <Grid item xs={4}>
-          <Box>
-            <Card variant="outlined">{form}</Card>
-          </Box>
-        </Grid>
-      </Grid>
-    </>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        marginTop: "20px",
+      }}
+    >
+      <Card sx={{ justifyContent: "center" }}>
+        <CardContent>
+          <TextField
+            id="standard-basic"
+            label="Mobile No."
+            variant="standard"
+          />{" "}
+          <br></br>
+          <TextField
+            type="password"
+            id="standard-basic"
+            label="Password"
+            variant="standard"
+          />
+        </CardContent>
+        <CardActions>
+          <Button variant="contained">Login</Button>
+          <Button variant="contained" sx={{ justifyContent: "right" }}>
+            Signup
+          </Button>
+        </CardActions>
+      </Card>
+    </div>
   );
 }
