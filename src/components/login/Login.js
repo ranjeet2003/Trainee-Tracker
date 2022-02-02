@@ -6,13 +6,8 @@ import {
   Button,
   TextField,
 } from "@mui/material";
-
-const form = () => {
-  <div>
-    <TextField id="standard-basic" label="Mobile No." variant="standard" />
-    <TextField id="standard-basic" label="Password" variant="standard" />
-  </div>;
-};
+import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
+import VpnKeyIcon from "@mui/icons-material/VpnKey";
 
 export default function MediaCard(props) {
   return (
@@ -26,12 +21,14 @@ export default function MediaCard(props) {
     >
       <Card sx={{ justifyContent: "center" }}>
         <CardContent>
+          <PhoneAndroidIcon sx={{ marginTop: "10%" }} />
           <TextField
             id="standard-basic"
             label="Mobile No."
             variant="standard"
           />{" "}
           <br></br>
+          <VpnKeyIcon sx={{ marginTop: "10%" }} />
           <TextField
             type="password"
             id="standard-basic"
@@ -41,9 +38,7 @@ export default function MediaCard(props) {
         </CardContent>
         <CardActions>
           <Button variant="contained">Login</Button>
-          <Button variant="contained" sx={{ justifyContent: "right" }}>
-            Signup
-          </Button>
+          <Button variant="contained">Signup</Button>
         </CardActions>
       </Card>
     </div>
